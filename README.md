@@ -45,5 +45,10 @@ I created the column % of each material because origionally I wanted the materia
 ### D3
 Creating the data set was the most time consuming, finding the right filters and tallying the years. After this was all done, I turned to examples of population pyramids for help with my actual project. My source was: https://doylek.github.io/D3-Population-Pyramid/ 
 
+### This is a screenshot from my final project
+<img width="1440" alt="Screen Shot 2021-10-03 at 11 59 30 PM" src="https://user-images.githubusercontent.com/48970337/135790736-35ea539b-60ec-4900-969b-d70be4de1418.png">
+
+## What I can improve on
+I believe working on aesthetics of the visualization would help with the story of this project. I think I can work on how the images are incorporated into the visualization, not just an add on. I also would like to play more with the layout of the population pyramid (i.e. possible play with orientation, stacking of materials, or changing the intervals used to show the information (less bars)).
 
 
