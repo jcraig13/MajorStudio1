@@ -8,6 +8,7 @@ function pyramidBuilder(data, target, options) {
       w = $( window ).width();
     }
 
+    //margins
     var margin = {
             top: 50,
             right: 10,
@@ -22,6 +23,7 @@ function pyramidBuilder(data, target, options) {
     w = (w- (margin.left + margin.right) );
     h = (h - (margin.top + margin.bottom));
 
+    //styles
     if (typeof options.style === 'undefined') {
       var style = {
         leftBarColor: '#6c9dc6',
@@ -38,6 +40,8 @@ function pyramidBuilder(data, target, options) {
     };
   }
 
+    //cumulates the total number in order to create the population
+    //function percentage returns the percentage of the material from the whole data set
     var totalPopulation = d3.sum(data, function(d) {
             return d.natural + d.synthetic;
         }),
@@ -61,11 +65,11 @@ function pyramidBuilder(data, target, options) {
         .attr('width', w_full)
         .attr('height', h_full);
 
-
+    //creates the legend
     var legend = region.append('g')
         .attr('class', 'legend');
 
-        // TODO: fix these margin calculations -- consider margin.middle == 0 -- what calculations for padding would be necessary?
+    //appends a key for a square of color with the corresponding label
     legend.append('rect')
         .attr('class', 'bar left')
         .attr('x', 80)
@@ -94,7 +98,7 @@ function pyramidBuilder(data, target, options) {
         .attr('dy', '0.32em')
         .text('synthetics');
         
-
+    //create the tooltip[]
     var tooltipDiv = d3.select("body").append("div")
         .attr("class", "tooltip")
         .style("opacity", 0);
@@ -105,7 +109,6 @@ function pyramidBuilder(data, target, options) {
 
     // find the maximum data value for whole dataset
     // and rounds up to nearest 5%
-    //  since this will be shared by both of the x-axes
     var maxValue = Math.ceil(Math.max(
         d3.max(data, function(d) {
             return percentage(d.natural);
@@ -117,8 +120,7 @@ function pyramidBuilder(data, target, options) {
 
     // SET UP SCALES
 
-    // the xScale goes from 0 to the width of a region
-    //  it will be reversed for the left x-axis
+    // the xScale goes from 0 to the width of a region and reversed for x axis
     var xScale = d3.scaleLinear()
         .domain([0, .29])
         .range([0, (sectorWidth-margin.middle)])
@@ -252,8 +254,6 @@ function pyramidBuilder(data, target, options) {
                 .style("opacity", 0);
         });
 
-    /* HELPER FUNCTIONS */
-
     // string concat for translate
     function translation(x, y) {
         return 'translate(' + x + ',' + y + ')';
@@ -294,3 +294,4 @@ function pyramidBuilder(data, target, options) {
 
     
 }
+//reference: https://doylek.github.io/D3-Population-Pyramid/
