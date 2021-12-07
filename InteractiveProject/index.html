@@ -1,28 +1,326 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" >
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./fontsource/style.css">
-    <link rel="stylesheet" href="./fontsource/stylesheet.css" type="text/css" charset="utf-8" />
-    <title>Interactive</title>
+  <meta charset="UTF-8">
+  <title>Interactive Plastic</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+  <script src="./data/d3.v4.js"></script>
+<link rel="stylesheet" href="./font/style.css">
+<script src="https://code.jquery.com/jquery-3.1.0.min.js" integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s=" crossorigin="anonymous"></script>
+<script src="https://d3js.org/d3.v4.min.js"></script>
+<script src="population.js"></script>
+
 </head>
 <body>
-    <div id="background"></div>
-    <div class='wrap'>
-        <div class='top-left'>
-          <div class='content-1'>natural</div>
-          <div class='content'>plastic</div>
+    <section>
+        <div class="wrap">
+            <div class="top-left">
+                <div class="content-1">natural</div>
+                <div class="content">plastic</div>
+            </div>
+            <div class="top-right">
+                <div class="content">synthetic</div>
+                <div class="content-1">plastic</div>
+            </div>
         </div>
-        <div class='top-right'>
-          <div class='content'>synthetic</div>
-          <div class='content-1'>plastic</div>
+    </section>
+    <section>
+        <div class="natural-info">
+            <div class="leftHalf">
+                What is natural plastic?
+            </div>
+            <div class="rightHalf">
+                Natural plastics are substances found from a range of animals. The animal kingdom was the origional source of design material. The hide and bones from animals offered a plasticity quality to bend and be molded to form anything.
+                <br><br>
+                The natural materials we will discuss today are: tortoiseshell, ivory, and leather. These materials are sourced from turtles, elephants, and various mammals.
+                <br><br>
+                Natural plastics like these were very popular from the 1500s to the mid 20th century. We will explore the Cooper Hewitt's collection and see when and how these materials were being used. This will explore the ethics of natural material vs. synthetic materials.
+            </div>
         </div>
-    </div>
-    
-    
-    
-
+    </section>
+    <section>
+        <div class= "leftHalf-tortoiseshell"> </div>
+        <div class= "rightHalf-tortoiseshell">
+            <div class="image-group">
+                <div class="image tortoiseshell1">
+                    <img class="image__img" src="./images/tortoiseshell2.jpg" alt="tortoiseshell material"style="height:400px; width:400px;">
+                    <div class="image__overlay">
+                        <div class="image__title">Pair of Earings (1890)</div>
+                        <p class="image__description">
+                            Pair of pendant earings. Medium: carved tortoiseshell, gold. Dolf by Tinsel Trading Company.
+                        </p>
+                    </div>
+                </div>
+                <div class="image tortoiseshell2">
+                    <img class="image__img" src="./images/tortoiseshell3.jpg" alt="tortoiseshell material in clothing"style="height:400px; width:400px;">
+                    <div class="image__overlay">
+                        <div class="image__title">Peineta Comb (19th Century)</div>
+                        <p class="image__description">
+                            Large comb with stylized flower and vine motifs. Medium: tortoiseshell. Made in Cuba.
+                        </p>
+                    </div>
+                </div>
+        </div>
+        <div class="infonat">
+            <h2>Tortoiseshell</h2><br>
+            <h3>A semi-transparent, yellow and brown, shell of turtles, typically found in jewlery and ornaments</h3>
+        </div>
+        </div>
+    </section>
+    <section>
+        <div class= "leftHalf-ivory"> </div>
+        <div class= "rightHalf-ivory">
+            <div class="image-group">
+                <div class="image ivory1">
+                    <img class="image__img" src="./images/ivory2.jpg" alt="ivory material" style= "width:300px;height:450px;">
+                    <div class="image__overlay">
+                        <div class="image__title">Pipe</div>
+                        <p class="image__description">
+                            Long carved stem with a circular mouthpiece. Medium: carved ivory. Made is USA.
+                        </p>
+                    </div>
+                </div>
+                <div class="image ivory2">
+                    <img class="image__img" src="./images/ivory3.jpg" alt="ivory material in clothing" style="height:450px; width:300px;">
+                    <div class="image__overlay">
+                        <div class="image__title">Birdcage (1735)</div>
+                        <p class="image__description">
+                            Hanging birdcage with circular dome shape. Medium: lacquered wood with inlaid ivory and ebony base.
+                        </p>
+                    </div>
+                </div>
+        </div>
+        <div class="infonat">
+            <h2>Ivory</h2><br>
+            <h3>A hard, white material from the tusks and teeth of animals such as elephants</h3>
+        </div>
+        </div>
+    </section>
+    <section>
+        <div class= "leftHalf-leather"> </div>
+        <div class= "rightHalf-leather">
+            <div class="image-group">
+                <div class="image leather1">
+                    <img class="image__img" src="./images/leather1.jpg" alt="leather material"style="height:350px; width:400px;">
+                    <div class="image__overlay">
+                        <div class="image__title">Card Case (19th Century)</div>
+                        <p class="image__description">
+                            Envelope shaped case with embroidery in formal design with silver clasp. Medium: leather, metal. Made in Spain.
+                        </p>
+                    </div>
+                </div>
+                <div class="image leather2">
+                    <img class="image__img" src="./images/leather3.jpg" alt="leather material"style="height:350px; width:400px;">
+                    <div class="image__overlay">
+                        <div class="image__title">Shoes (1920)</div>
+                        <p class="image__description">
+                            Two-tone black and white short heels. Medium: leather. Designed by N. Greco.
+                        </p>
+                    </div>
+                </div>
+        </div>
+        <div class="infonat">
+            <h2>Leather</h2><br>
+            <h3>A strong, felxible, and durable material obtained from the chemical treatment of animal skins and hides.</h3>
+        </div>
+        </div>
+    </section>
+    <section>
+        <div class="leftHalf">
+            <div id="natural_chart">
+            </div>
+        </div>
+        <div class="rightHalf">
+            <div class="chart-title-nat">Use of Natural Plastic</div>
+            <div class="legend-nat">
+                <div class="year1500-1549">1500-1549</div>
+                <div class="year1550-1599">1550-1599</div>
+                <div class="year1600-1649">1600-1649</div>
+                <div class="year1650-1699">1650-1699</div>
+                <div class="year1700-1749">1700-1749</div>
+                <div class="year1750-1799">1750-1799</div>
+                <div class="year1800-1849">1800-1849</div>
+                <div class="year1800-1849">1850-1899</div>
+                <div class="year1900-1949">1900-1949</div>
+                <div class="year1950-1999">1950-1999</div>
+            </div>
+            <div class="legend-square">
+                <div class="box tort">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;tortoiseshell</div>
+                <div class="box ivory">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ivory</div>
+                <div class="box leather">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;leather</div>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="synthetic-info">
+            <div class="leftHalf">
+                To keep up with the average consumer and industry demand, scientists developed "synthetic substitutes" in the late 19th century. This ultimatley led to the boom of inexpensive petroleum based plastics used today.<br><br>
+                These plastics were produced in large quantities and now present environmental crisis in the modern day. While trying to solve one issue, there comes another, coming full circle.
+                <br><br>Designers, manufactuers, and consumers are exploring natural materials. There is a movement to create renewable and biodegradable bioplastics. Is there really an ethical option when it comes to design materials?
+            </div>
+            <div class="rightHalf">
+                <h3>Where did synthetic plastic come from?</h3>
+                Popularity of natural plastics led to the overconsumption of these materials and endagered the species that were being harvested.
+                
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class= "leftHalf-nylon">
+            <div class="image-group">
+                <div class="image nylon1">
+                    <img class="image__img" src="./images/nylon2.jpg" alt="nylon material in clothing"style="height:530px; width:400px;">
+                    <div class="image__overlay">
+                        <div class="image__title">Nike Victory Swim (2020)</div>
+                        <p class="image__description">
+                            Two Piece Pro Hijab Swimsuit. Medium: Nylon Lycra. Designed by Martha Moore, Ashley Lakovic, Tracy Murphy.
+                        </p>
+                    </div>
+                </div>
+                <div class="image nylon2">
+                    <img class="image__img" src="./images/nylon3.jpg" alt="nylon material in clothing"style="height:530px; width:400px;">
+                    <div class="image__overlay">
+                        <div class="image__title">UNYQ Align (2016)</div>
+                        <p class="image__description">
+                            Scoliosis Brace Prototype. Medium: Nylon. Designed by Francis Bitonti, Studio Bitonti, Peter Wildfeuer, Li Chen.
+                        </p>
+                    </div>
+                </div>
+        </div>
+        <div class="info">
+            <h2>Nylon</h2>
+            <h3>a silk-like thermoplastic made from petroleum that can be melt-processed into fibers, films, and shapes</h3>
+        </div>
+        </div>
+        <div class= "rightHalf-nylon">
+        </div>
+    </section>
+    <section>
+        <div class= "leftHalf-polyester">
+            <div class="image-group">
+                <div class="image polyester1">
+                    <img class="image__img" src="./images/polyester2.jpg" alt="polyester material in clothing"style="height:590px; width:400px;">
+                    <div class="image__overlay">
+                        <div class="image__title">Dress, Jacket, and Stole (2017)</div>
+                        <p class="image__description">
+                            Spring/Summer collection dress, jacket, and stole. Medium: Polyester blend, lace, net, sequins, pearl, glass beads. Designed by Saiqa Majeed.
+                        </p>
+                    </div>
+                </div>
+                <div class="image polyester2">
+                    <img class="image__img" src="./images/polyester3.jpg" alt="polyester material in clothing"style="height:590px; width:400px;">
+                    <div class="image__overlay">
+                        <div class="image__title">Hankerchief (1985)</div>
+                        <p class="image__description">
+                            Side chair. Medium: Red Polyester mounted on black metal base. Designed by Massimo Vignelli, Lella Vignelli.
+                        </p>
+                    </div>
+                </div>
+        </div>
+        <div class="info">
+            <h2>Polyester</h2>
+            <h3>a durable, lightweight, wrinkle-resistant fabric or textile made from synthetic, manmade materical scientifically called, "polyethylene terephthalate"</h3>
+        </div>
+        </div>
+        <div class= "rightHalf-polyester"> </div>
+    </section>
+    <section>
+        <div class= "leftHalf-plastic">
+            <div class="image-group">
+                <div class="image plastic1">
+                    <img class="image__img" src="./images/plastic2.jpg" alt="plastic material"style="height:500px; width:400px;">
+                    <div class="image__overlay">
+                        <div class="image__title">For Women Hair Brush (1999)</div>
+                        <p class="image__description">
+                            Hair brush. Medium: plastic. Designed by Eric P. Chan for Goody Products.
+                        </p>
+                    </div>
+                </div>
+                <div class="image plastic2">
+                    <img class="image__img" src="./images/plastic3.jpg" alt="polyester material in clothing"style="height:500px; width:400px;">
+                    <div class="image__overlay">
+                        <div class="image__title">Patriot Radio (1940)</div>
+                        <p class="image__description">
+                            Radio. Medium: phenolic resin, urea plastic, cellulose acetate, metal. Designed by Norman Bel Geddes for Emerson Radio.
+                        </p>
+                    </div>
+                </div>
+        </div>
+        <div class="info">
+            <h2>Plastic</h2>
+            <h3>a wide range of synthetic materials that can be moulded, extruded or pressed into objects and various shapes</h3>
+        </div>
+        </div>
+        <div class= "rightHalf-plastic"> </div>
+    </section>
+    <section>
+        <div class="chart-title">Use of Synthetic Plastic</div>
+        <br><br>
+        <div class="leftHalf">
+            <div class="legend-syn">
+                <div class="year1850-1899">1850-1899</div>
+                <div class="year1900-1949">1900-1949</div>
+                <div class="year1950-1999">1950-1999</div>
+                <div class="year2000-2049">2000-2049</div>
+            </div>
+            <div class="legend-square">
+                <div class="box plastic">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;plastic</div>
+                <div class="box polyester">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;polyester</div>
+                <div class="box nylon">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;nylon</div>
+            </div>
+        </div>
+        <div class="rightHalf">
+            <div id="synthetic_chart"></div>
+        </div>
+        
+     </div>
+    </section>
+    <section>
+        <div id="pyramid">
+    </section>
+    <section>
+        <h1>Section six</h1>
+    </section>
+    <!-- partial -->
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/randomcolor/0.5.2/randomColor.js'></script>
+    <script src='https://bundle.run/css-scroll-snap-polyfill@0.1.2'></script>
+    <script  src="./app.js"></script>
+    <script  src="./synChart.js"></script>
+    <script>
+        // data aggregated in excel must be in format: (year, natural, synthetic, tortoiseshell, leather, ivory, plastic, nylon, polyester)
+        var materialData = [
+            {year:  1500 , natural: 7, synthetic: 0, tortoiseshell:  0, leather: 5, ivory: 2, plastic: 0, nylon: 0, polyester: 0},
+            {year:  1525 , natural: 3, synthetic: 0, tortoiseshell:  0, leather: 0, ivory: 3, plastic: 0, nylon: 0, polyester: 0},
+            {year:  1550 , natural: 3, synthetic: 0, tortoiseshell:  0, leather: 1, ivory: 2, plastic: 0, nylon: 0, polyester: 0},
+            {year:  1575 , natural: 3, synthetic: 0, tortoiseshell:  0, leather: 0, ivory: 3, plastic: 0, nylon: 0, polyester: 0},
+            {year:  1600 , natural: 37, synthetic: 0, tortoiseshell:  2, leather: 12, ivory: 23, plastic: 0, nylon: 0, polyester: 0},
+            {year:  1625 , natural: 5, synthetic: 0, tortoiseshell:  0, leather: 0, ivory: 5, plastic: 0, nylon: 0, polyester: 0},
+            {year:  1650 , natural: 33, synthetic: 0, tortoiseshell:  1, leather: 10, ivory: 22, plastic: 0, nylon: 0, polyester: 0},
+            {year:  1675 , natural: 127, synthetic: 0, tortoiseshell:  0, leather: 111, ivory: 16, plastic: 0, nylon: 0, polyester: 0},
+            {year:  1700 , natural: 87, synthetic: 0, tortoiseshell:  5, leather: 50, ivory: 32, plastic: 0, nylon: 0, polyester: 0},
+            {year:  1725 , natural: 38, synthetic: 0, tortoiseshell:  1, leather: 25, ivory: 12, plastic: 0, nylon: 0, polyester: 0},
+            {year:  1750 , natural: 91, synthetic: 0, tortoiseshell:  5, leather: 27, ivory: 59, plastic: 0, nylon: 0, polyester: 0},
+            {year:  1775 , natural: 58, synthetic: 0, tortoiseshell:  3, leather: 6, ivory: 49, plastic: 0, nylon: 0, polyester: 0},
+            {year:  1800 , natural: 120, synthetic: 0, tortoiseshell:  13, leather: 53, ivory: 54, plastic: 0, nylon: 0, polyester: 0},
+            {year:  1825 , natural: 24, synthetic: 0, tortoiseshell:  4, leather: 3, ivory: 17, plastic: 0, nylon: 0, polyester: 0},
+            {year:  1850 , natural: 173, synthetic: 0, tortoiseshell:  15, leather: 89, ivory: 69, plastic: 0, nylon: 0, polyester: 0},
+            {year:  1875 , natural: 77, synthetic: 3, tortoiseshell:  2, leather: 45, ivory: 30, plastic: 3, nylon: 0, polyester: 0},
+            {year:  1900 , natural: 139, synthetic: 92, tortoiseshell:  0, leather: 64, ivory: 75, plastic: 92, nylon: 0, polyester: 0},
+            {year:  1925 , natural: 12, synthetic: 205, tortoiseshell:  0, leather: 0, ivory: 12, plastic: 194, nylon: 6, polyester: 5},
+            {year:  1950 , natural: 5, synthetic: 968, tortoiseshell:  0, leather: 0, ivory: 5, plastic: 600, nylon: 275, polyester: 93},
+            {year:  1975 , natural: 5, synthetic: 744, tortoiseshell:  0, leather: 0, ivory: 5, plastic: 607, nylon: 38, polyester: 99},
+            {year:  2000 , natural: 0, synthetic: 356, tortoiseshell:  0, leather: 0, ivory: 0, plastic: 78, nylon: 101, polyester: 177},
+            {year:  2025 , natural: 0, synthetic: 7, tortoiseshell:  0, leather: 0, ivory: 0, plastic: 0, nylon: 4, polyester: 3}
+            ]
+        var options = {
+            height: 1000,
+            width: 1600,
+            style: {
+                leftBarColor: "#f3dac4",
+                rightBarColor: "#527e8b"
+            }
+        }
+        pyramidBuilder(materialData, '#pyramid', options);
+    </script>
 </body>
 </html>
