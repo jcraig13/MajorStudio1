@@ -33,6 +33,38 @@ Info Source: collections.si.edu, Cooper Hewitt Smithsonian Design Museum
 
 Charts Used: stacked bar graph, population pyramid
 
+### index.html
+
+This file is to host the content of the site. This is where I have all the images and sections of information. It has the svg charts used, labels for the charts, and the data for the population pyramid
+
+### population.js
+
+This file takes the material data and created a double sided bar graph with a diverging y axis.
+
+### app.js
+
+This javascript file created a stacked bar graph for the natural material information graph. The categories being the three materials I chose, tortoiseshell, ivory, and leather.
+
+### synchart.js
+
+This is a javascript file to create a stacked bar graph for the synthetic material information graph. The categories being the three materials chosen, nylon, polyester, plastic.
+
+### style.css
+
+This file sets up the snap scroll function, the web font downloaded, the format for the diverging background, hover image tooltip, etc.
+
+### data
+
+This folder hosts the csv files for the synthetic and natural charts and the d3.js library
+
+### images
+
+This folder hosts the images I downloaded to use for my project.
+
+### font
+
+This foler holds the .woff .woff2 files for the font I chose to use. This is also where my stylesheet is located.
+
 
 ## Final Iteration
 Here are some screenshots of my final product:
